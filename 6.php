@@ -1,12 +1,16 @@
+
+<!-- 6. Write a PHP program to keep track of the number of visitors visiting the web page
+and to display this count of visitors, with proper headings. -->
+
 <?php
 print "<h3> REFRESH PAGE </h3>";
 $name="counter.txt";
-$file = fopen($name,"r");
-$hits= fscanf($file,"%d");
+$file = fopen($name, "r");
+$hits= fscanf($file, "%d");
 fclose($file);
 $hits[0]++;
-$file = fopen($name,"w");
-fprintf($file,"%d",$hits[0]);
+$file = fopen($name, "w");
+fprintf($file, "%d", $hits[0]);
 fclose($file);
 print "Total number of views: ".$hits[0];
 ?>
